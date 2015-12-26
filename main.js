@@ -5,7 +5,15 @@ var FPS = 60;
 var cursor = {};
 var isBuilding = false;
 var tower = {};
-
+var enemy ={x:96,
+y:480~32,
+direction:{x:0,y:-1},
+speed:32,
+move: function(){
+	this.x = this.x + this.direction.x * this.speed/FPS;
+	this.y = this.y + this.direction.y * this.speed/FPS;
+}
+};
 // ====== 引入圖檔 ====== //
 var bgImg = document.createElement("img");
 bgImg.src = "images/map.png";
