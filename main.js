@@ -21,6 +21,8 @@ var buttonImg = document.createElement("img");
 buttonImg.src = "images/tower-btn.png";
 var towerImg = document.createElement("img");
 towerImg.src = "images/tower.png";
+var slimeImg = document.createElement("img");  
+slimeImg.src = "images/ slime.gif";              	 
 
 // ==================== //
 
@@ -48,6 +50,7 @@ function draw(){
 	ctx.drawImage(bgImg,0,0);
 	ctx.drawImage(buttonImg, 640-64, 480-64, 64, 64);
 	ctx.drawImage(towerImg, tower.x, tower.y);
+	ctx.drawImage(slimeImg,enemy.x,enemy.y);
 	enemy.move();
 	if(isBuilding){
 		ctx.drawImage(towerImg, cursor.x, cursor.y);
