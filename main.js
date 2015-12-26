@@ -13,6 +13,10 @@ var buttonImg = document.createElement("img");
 buttonImg.src = "images/tower-btn.png";
 var towerImg = document.createElement("img");
 towerImg.src = "images/tower.png";
+var enemy ={
+	x:96,
+	y:480~32
+};
 // ==================== //
 
 $("#game-canvas").mousemove(function(event) {
