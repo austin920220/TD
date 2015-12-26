@@ -5,7 +5,7 @@ var FPS = 60;
 var cursor = {};
 var isBuilding = false;
 var tower = {};
-
+var enemy ={x:96,y:480~32};
 // ====== 引入圖檔 ====== //
 var bgImg = document.createElement("img");
 bgImg.src = "images/map.png";
@@ -13,10 +13,8 @@ var buttonImg = document.createElement("img");
 buttonImg.src = "images/tower-btn.png";
 var towerImg = document.createElement("img");
 towerImg.src = "images/tower.png";
-var enemy ={
-	x:96,
-	y:480~32
-};
+var slimeImg = document.createElement("img");
+ slimeImg.src = "images/ slime.gif";
 // ==================== //
 
 $("#game-canvas").mousemove(function(event) {
@@ -45,6 +43,7 @@ function draw(){
 	ctx.drawImage(towerImg, tower.x, tower.y);
 	if(isBuilding){
 		ctx.drawImage(towerImg, cursor.x, cursor.y);
+	ctx.drawImage(slimeImg,enemy.x,enemy.y);	
 	}
 }
 
