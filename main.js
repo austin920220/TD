@@ -13,6 +13,7 @@ move: function(){
 	this.x = this.x + this.direction.x * this.speed/FPS;
 	this.y = this.y + this.direction.y * this.speed/FPS;
 }
+};
 // ====== 引入圖檔 ====== //
 var bgImg = document.createElement("img");
 bgImg.src = "images/map.png";
