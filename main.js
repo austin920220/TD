@@ -48,6 +48,7 @@ function draw(){
 	ctx.drawImage(bgImg,0,0);
 	ctx.drawImage(buttonImg, 640-64, 480-64, 64, 64);
 	ctx.drawImage(towerImg, tower.x, tower.y);
+	enemy.move();
 	if(isBuilding){
 		ctx.drawImage(towerImg, cursor.x, cursor.y);
 	
