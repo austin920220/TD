@@ -22,7 +22,7 @@ buttonImg.src = "images/tower-btn.png";
 var towerImg = document.createElement("img");
 towerImg.src = "images/tower.png";
 var slimeImg = document.createElement("img");  
-slimeImg.src = "images/ slime.gif";              	 
+slimeImg.src = "images/slime.gif";              	 
 
 // ==================== //
 
