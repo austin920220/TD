@@ -17,8 +17,7 @@ var buttonImg = document.createElement("img");
 buttonImg.src = "images/tower-btn.png";
 var towerImg = document.createElement("img");
 towerImg.src = "images/tower.png";
-var slimeImg = document.createElement("img");
- slimeImg.src = "images/ slime.gif";
+
 // ==================== //
 
 $("#game-canvas").mousemove(function(event) {
@@ -47,7 +46,7 @@ function draw(){
 	ctx.drawImage(towerImg, tower.x, tower.y);
 	if(isBuilding){
 		ctx.drawImage(towerImg, cursor.x, cursor.y);
-	ctx.drawImage(slimeImg,enemy.x,enemy.y);	
+	
 	}
 }
 
