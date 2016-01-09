@@ -14,6 +14,17 @@ move: function(){
 	this.y = this.y + this.direction.y * this.speed/FPS;
 }
 };
+function getUnitVector (srcX, srcY, targetX, targetY) {
+    var offsetX = targetX - srcX;
+    var offsetY = targetY - srcY;
+    var distance = Math.sqrt( Math.pow(offsetX,2) + Math.pow(offsetY,2) );
+    var unitVector = {
+        x: offsetX/distance,
+        y: offsetY/distance
+    };
+    return unitVector;
+}
+
 var enemyPath = [
 	{x:96, y:64},
 	{x:384, y:64},
