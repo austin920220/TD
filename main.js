@@ -26,10 +26,6 @@ var slimeImg = document.createElement("img");
 slimeImg.src = "images/slime.gif";              	 
 
 // ==================== //
-var enemyPath = [
-	{x:96,y:64}
-	{x:384,y:64}
-]
 
 $("#game-canvas").mousemove(function(event) {
 	cursor = {
@@ -80,3 +76,7 @@ function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight)
 		return false;
 	}
 }
+var enemyPath = [
+	{x:96,y:64}
+	{x:384,y:64}
+];
