@@ -9,6 +9,7 @@ var enemy ={x:96,
 y:480-32,
 direction:{x:0,y:-1},
 speed:32,
+pathDes:0,
 move: function(){
 	if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y, this.x, this,y, this.speed/FPS, this.speed/FPS)){
 		// 首先，移動到下一個路徑點
