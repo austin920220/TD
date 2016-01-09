@@ -14,10 +14,7 @@ move: function(){
 	this.y = this.y + this.direction.y * this.speed/FPS;
 }
 };
-var enemyPath = [
-	{x:96,y:64}
-	{x:384,y:64}
-]
+
 // ====== 引入圖檔 ====== //
 var bgImg = document.createElement("img");
 bgImg.src = "images/map.png";
@@ -79,3 +76,7 @@ function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight)
 		return false;
 	}
 }
+var enemyPath = [
+	{x:96,y:64}
+	{x:384,y:64}
+]
