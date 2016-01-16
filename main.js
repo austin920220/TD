@@ -72,11 +72,11 @@ $("#game-canvas").click(function(){
 });
 
 function draw(){
+	ctx.drawImage(bgImg,0,0);
 	if(clock % 80 == 0){
 		var newEnemy = new Enemy();
 		enemies.push(newEnemy);
 	}
-	ctx.drawImage(bgImg,0,0);
 	ctx.drawImage(buttonImg, 640-64, 480-64, 64, 64);
 	ctx.drawImage(towerImg, tower.x, tower.y);
 	if(isBuilding){
