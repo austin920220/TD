@@ -5,7 +5,7 @@ var FPS = 60;
 var cursor = {};
 var isBuilding = false;
 var tower = {};
-var enemy = new Enemy();
+var enemies = new Enemy();
 function Enemy() { 
     this.x = 96; 
     this.y = 480-32;
@@ -72,6 +72,10 @@ $("#game-canvas").click(function(){
 });
 
 function draw(){
+	for(var i=0; i<enemies.length; i++){
+		enemies[i].move();
+		ctx.drawImage( slimeImg, enemies[i].x, enemies[i].y);
+	}
 	ctx.drawImage(bgImg,0,0);
 	ctx.drawImage(buttonImg, 640-64, 480-64, 64, 64);
 	ctx.drawImage(towerImg, tower.x, tower.y);
@@ -84,6 +88,7 @@ function draw(){
 }
 
 setInterval(draw, 1000/FPS);
+
 
 
 
