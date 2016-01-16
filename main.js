@@ -28,7 +28,6 @@ function Enemy() {
         }
     };
 }
-
 move: function(){
 	if(isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y, this.x, this.y, this.speed/FPS, this.speed/FPS)){
 		// 首先，移動到下一個路徑點
