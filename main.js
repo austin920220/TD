@@ -5,7 +5,7 @@ var FPS = 60;
 var cursor = {};
 var isBuilding = false;
 var tower = {};
-var enemy = new Enemy();
+var enemies = new Enemy();
 function Enemy() { 
     this.x = 96; 
     this.y = 480-32;
