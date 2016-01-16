@@ -104,6 +104,11 @@ function draw(){
 
 setInterval(draw, 1000/FPS);
 
+for(var i=0; i<enemies.length; i++){
+enemies[i].move();
+ctx.drawImage( slimeImg, enemies[i].x, enemies[i].y);
+}
+
 
 
 // ====== 其他函式 ====== //
