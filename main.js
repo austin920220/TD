@@ -85,7 +85,8 @@ function draw(){
 	for(var i=0; i<enemies.length; i++){
 		enemies[i].move();
 		ctx.drawImage( slimeImg, enemies[i].x, enemies[i].y);
-	}	
+	}
+	clock++;
 }
 
 setInterval(draw, 1000/FPS);
