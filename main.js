@@ -72,8 +72,7 @@ $("#game-canvas").click(function(){
 });
 
 function draw(){
-	for(var i=0; i<enemies.length; i++){
-	enemies[i].move();
+	
 ctx.drawImage( slimeImg, enemies[i].x, enemies[i].y);
 }
 	ctx.drawImage(bgImg,0,0);
