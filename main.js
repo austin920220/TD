@@ -6,7 +6,6 @@ var cursor = {};
 var isBuilding = false;
 var tower = {};
 var enemy = Newenemy;
-
 function Enemy() { 
     this.x = 96; 
     this.y = 480-32;
