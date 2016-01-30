@@ -127,12 +127,14 @@ function draw(){
 	    ctx.drawImage( crosshairImg, enemies[id].x, enemies[id].y );
 	}
 	clock++;
+	
+	ctx.fillText( "hp", 100, 100 );
+ctx.font = "24px Arial";
+ctx.font = "24px Arial";
 }
 
 setInterval(draw, 1000/FPS);
-ctx.fillText( "hp", 100, 100 );
-ctx.font = "24px Arial";
-ctx.font = "24px Arial";
+
 
 
 // ====== 其他函式 ====== //
