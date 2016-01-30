@@ -4,7 +4,10 @@ var clock = 0;
 var FPS = 60;
 var cursor = {};
 var isBuilding = false;
-var tower = {};
+var tower = {
+	tower.range : 96,
+	tower.aimingEnemyId : null
+};
 var enemies = [];
 function Enemy() { 
     this.x = 96; 
