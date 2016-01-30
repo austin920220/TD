@@ -63,6 +63,9 @@ var enemyPath = [
 	{x:544, y:320},
 	{x:544, y:96}
 ];
+var crosshairImg = document.createElement("img");
+crosshairImg.src = "images/crosshair.png";
+
 // ====== 引入圖檔 ====== //
 var bgImg = document.createElement("img");
 bgImg.src = "images/map.png";
@@ -122,10 +125,10 @@ function draw(){
 
 setInterval(draw, 1000/FPS);
 
-
-
-
-
+if ( tower.aimingEnemyId!=null ) {
+    var id = tower.aimingEnemyId;
+    ctx.drawImage( crosshairImg, enemies[id].x, enemies[id].y );
+}
 
 // ====== 其他函式 ====== //
 
