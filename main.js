@@ -9,18 +9,18 @@ var tower = {
 	range : 96,
 	aimingEnemyId : null,
 	searchEnemy: function(){
-for(var i=0; i<enemies.length; i++){
-            var distance = Math.sqrt( 
-                Math.pow(this.x-enemies[i].x,2) + Math.pow(this.y-enemies[i].y,2) 
-            );
-            if (distance<=this.range) {
-                this.aimingEnemyId = i;
-                return;
-            }
-        }
-        // 如果都沒找到，會進到這行，清除鎖定的目標
-        this.aimingEnemyId = null;
-    }
+		for(var i=0; i<enemies.length; i++){
+	            var distance = Math.sqrt( 
+	                Math.pow(this.x-enemies[i].x,2) + Math.pow(this.y-enemies[i].y,2) 
+	            );
+	            if (distance<=this.range) {
+	                this.aimingEnemyId = i;
+	                return;
+	            }
+	        }
+	        // 如果都沒找到，會進到這行，清除鎖定的目標
+	        this.aimingEnemyId = null;
+	}
 };
 
 
