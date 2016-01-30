@@ -4,6 +4,7 @@ var clock = 0;
 var FPS = 60;
 var cursor = {};
 var isBuilding = false;
+var hp = 100;
 var tower = {
 	range : 96,
 	aimingEnemyId : null,
@@ -124,6 +125,7 @@ function draw(){
 }
 
 setInterval(draw, 1000/FPS);
+ctx.fillText( "hp", 100, 100 );
 
 if ( tower.aimingEnemyId!=null ) {
     var id = tower.aimingEnemyId;
