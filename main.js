@@ -130,7 +130,7 @@ function draw(){
 	
 	ctx.font = "24px Arial";
 	ctx.fillText( "hp:"+hp, 100, 100 );
-	ctx.fillStyle ( "white");
+	ctx.fillStyle = "white";
 }
 
 setInterval(draw, 1000/FPS);
