@@ -119,17 +119,17 @@ function draw(){
 		}	
 		enemies[i].move();
 		ctx.drawImage( slimeImg, enemies[i].x, enemies[i].y);
-	}
+	}if ( tower.aimingEnemyId!=null ) {
+    var id = tower.aimingEnemyId;
+    ctx.drawImage( crosshairImg, enemies[id].x, enemies[id].y );
+}
 	clock++;
 }
 
 setInterval(draw, 1000/FPS);
 ctx.fillText( "hp", 100, 100 );
 
-if ( tower.aimingEnemyId!=null ) {
-    var id = tower.aimingEnemyId;
-    ctx.drawImage( crosshairImg, enemies[id].x, enemies[id].y );
-}
+
 
 // ====== 其他函式 ====== //
 
