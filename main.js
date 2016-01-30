@@ -45,7 +45,6 @@ function Enemy() {
             var unitVector = getUnitVector( this.x, this.y, enemyPath[this.pathDes].x, enemyPath[this.pathDes].y );
             this.direction.x = unitVector.x;
             this.direction.y = unitVector.y;
-        } else {
             // this.x += this.direction.x * this.speed/FPS;
             this.x = this.x + this.direction.x * this.speed/FPS;
             // this.y += this.direction.y * this.speed/FPS;
