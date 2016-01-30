@@ -35,21 +35,23 @@ function Enemy() {
     this.move = function(){
         if( isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y, this.x, this.y, this.speed/FPS, this.speed/FPS) ){
             
-            if(this.pathDes === enemypath.length-1) {
-             this.hp=0;	
-             hp -= 10;	
-        }else{
-            this.x = enemyPath[this.pathDes].x;
-            this.y = enemyPath[this.pathDes].y;
-            this.pathDes++;
-            var unitVector = getUnitVector( this.x, this.y, enemyPath[this.pathDes].x, enemyPath[this.pathDes].y );
-            this.direction.x = unitVector.x;
-            this.direction.y = unitVector.y;
-            // this.x += this.direction.x * this.speed/FPS;
-            this.x = this.x + this.direction.x * this.speed/FPS;
-            // this.y += this.direction.y * this.speed/FPS;
-            this.y = this.y + this.direction.y * this.speed/FPS;
-        }
+		if(this.pathDes === enemypath.length-1) {
+			this.hp=0;	
+			hp -= 10;	
+	        }else{
+	            this.x = enemyPath[this.pathDes].x;
+	            this.y = enemyPath[this.pathDes].y;
+	            this.pathDes++;
+	            var unitVector = getUnitVector( this.x, this.y, enemyPath[this.pathDes].x, enemyPath[this.pathDes].y );
+	            this.direction.x = unitVector.x;
+	            this.direction.y = unitVector.y;
+	        }
+	} else {
+		// this.x += this.direction.x * this.speed/FPS;
+		this.x = this.x + this.direction.x * this.speed/FPS;
+		// this.y += this.direction.y * this.speed/FPS;
+		this.y = this.y + this.direction.y * this.speed/FPS;
+	}
     };
 }
 
@@ -119,10 +121,11 @@ function draw(){
 		}	
 		enemies[i].move();
 		ctx.drawImage( slimeImg, enemies[i].x, enemies[i].y);
-	}if ( tower.aimingEnemyId!=null ) {
-    var id = tower.aimingEnemyId;
-    ctx.drawImage( crosshairImg, enemies[id].x, enemies[id].y );
-}
+	}
+	if ( tower.aimingEnemyId!=null ) {
+	    var id = tower.aimingEnemyId;
+	    ctx.drawImage( crosshairImg, enemies[id].x, enemies[id].y );
+	}
 	clock++;
 }
 
