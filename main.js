@@ -129,8 +129,8 @@ function draw(){
 	clock++;
 	
 	ctx.fillText( "hp", 100, 100 );
-ctx.font = "24px Arial";
-ctx.font = "24px Arial";
+	ctx.font = "24px Arial";
+	ctx.font = "24px Arial";
 }
 
 setInterval(draw, 1000/FPS);
