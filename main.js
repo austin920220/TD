@@ -9,11 +9,17 @@ var enemies = [];
 function Enemy() { 
     this.x = 96; 
     this.y = 480-32;
+    this.hp = 10;
     this.direction = {x:0,y:-1};
     this.speed = 64;
     this.pathDes = 0;
     this.move = function(){
         if( isCollided(enemyPath[this.pathDes].x, enemyPath[this.pathDes].y, this.x, this.y, this.speed/FPS, this.speed/FPS) ){
+            
+            if(this.pathDes === enemypath.length-1) {
+             this.hp=0;	
+             hp -= 10;	
+        }else{
             this.x = enemyPath[this.pathDes].x;
             this.y = enemyPath[this.pathDes].y;
             this.pathDes++;
