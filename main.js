@@ -23,7 +23,7 @@ for(var i=0; i<enemies.length; i++){
     }
 };
 
-};
+
 var enemies = [];
 function Enemy() { 
     this.x = 96; 
