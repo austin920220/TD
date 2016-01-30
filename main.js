@@ -153,4 +153,4 @@ function getUnitVector (srcX, srcY, targetX, targetY) {
         y: offsetY/distance
     };
     return unitVector;
-};
+}
