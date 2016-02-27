@@ -81,8 +81,7 @@ var slimeImg = document.createElement("img");
 slimeImg.src = "images/slime.gif";
 var crosshairImg = document.createElement("img");
 crosshairImg.src = "images/crosshair.png";
-var cannon-ballImg = document.createElement("img");
-cannon-ballImg.src = "cannon-ball.png";
+
 // ==================== //
 
 $("#game-canvas").mousemove(function(event) {
