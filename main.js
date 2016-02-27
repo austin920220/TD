@@ -68,10 +68,7 @@ var enemyPath = [
 
 
 
-function Cannonball () {
-    this.speed = 320;
-    this.damage = 5;
-}
+
 
 // ====== 引入圖檔 ====== //
 var bgImg = document.createElement("img");
