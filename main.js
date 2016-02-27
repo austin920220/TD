@@ -65,8 +65,13 @@ var enemyPath = [
 	{x:544, y:320},
 	{x:544, y:96}
 ];
-var crosshairImg = document.createElement("img");
-crosshairImg.src = "images/crosshair.png";
+
+
+
+function Cannonball () {
+    this.speed = 320;
+    this.damage = 5;
+}
 
 // ====== 引入圖檔 ====== //
 var bgImg = document.createElement("img");
@@ -76,8 +81,11 @@ buttonImg.src = "images/tower-btn.png";
 var towerImg = document.createElement("img");
 towerImg.src = "images/tower.png";
 var slimeImg = document.createElement("img");  
-slimeImg.src = "images/slime.gif";              	 
-
+slimeImg.src = "images/slime.gif";
+var crosshairImg = document.createElement("img");
+crosshairImg.src = "images/crosshair.png";
+var cannon-ballImg = document.createElement("img");
+cannon-ballImg.src = "cannon-ball.png";
 // ==================== //
 
 $("#game-canvas").mousemove(function(event) {
@@ -135,7 +143,14 @@ function draw(){
 
 setInterval(draw, 1000/FPS);
 
-
+for(var _i=0; _i<cannonballs.length; _i++){
+        cannonballs[_i].move();
+        if (cannonballs[_i].hitted) {
+            cannonballs.splice(_i,1);
+        } else {
+            ctx.drawImage( cannonballImg, cannonballs[_i].x, cannonballs[_i].y );
+        }
+}
 
 // ====== 其他函式 ====== //
 
