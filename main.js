@@ -1,7 +1,6 @@
+var GAME_TICKER;
 
-
-var canvas = document.getElementById("game-canvas");
-var ctx = canvas.getContext("2d");;
+var c, ctx;
 var bgImg, towerImg, towerButtonImg;
 var towerButton;
 var cursor;
@@ -26,6 +25,7 @@ var towerPrice = 25;
 var enemyUpdatePeriod = 200;
 var score = 0;
 
+// ========= Classes =========== //
 
 var Tower = function(){
 	this.x = parseInt(cursor.x/32)*32;
@@ -289,3 +289,4 @@ function draw () {
 	clock++;
 
 }
+
