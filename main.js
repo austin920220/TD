@@ -129,7 +129,7 @@ function draw(){
 	clock++;
 	
 	ctx.font = "24px Arial";
-	ctx.fillText( "hp:"+hp, 40, 20 );
+	ctx.fillText( "hp:"+hp, 40, 400 );
 	ctx.fillStyle = "white";
 }
 
